@@ -10,10 +10,24 @@ https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files
 # Note: pay close attention to your current directory when trying to open "foo.txt"
 
 # YOUR CODE HERE
-
+with open('./foo.txt') as f:
+    read_data = f.read()
+    print(read_data)
 # Open up a file called "bar.txt" (which doesn't exist yet) for
 # writing. Write three lines of arbitrary content to that file,
 # then close the file. Open up "bar.txt" and inspect it to make
 # sure that it contains what you expect it to contain
 
 # YOUR CODE HERE
+n = open("./bar.txt","w")
+#if there is no file by this name one will be created. the w flag gives the write permission.
+n.write("This is pretty neat.\n")
+n.write("I wonder what else I can do with this.\n")
+n.write("I guess we'll find out\n")
+n.close()
+# be sure to close a file when you are done with it.
+#Python will eventually close it, but it could cause some issues
+#im sure I will learn more about these.
+
+
+#https://www.guru99.com/reading-and-writing-files-in-python.html
